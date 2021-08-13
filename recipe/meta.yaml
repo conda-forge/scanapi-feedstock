@@ -23,13 +23,13 @@ requirements:
     - poetry
     - python >=3.6
   run:
-    - appdirs >=1.4.4
-    - click ==7.1.2
-    - curlify2 >=1.0.1
-    - jinja2 ==2.11.3
+    - appdirs
+    - click
+    - curlify2
+    - jinja2
     - python >=3.6
-    - pyyaml ==5.4
-    - requests ==2.26.0
+    - pyyaml
+    - requests
 
 test:
   imports:
