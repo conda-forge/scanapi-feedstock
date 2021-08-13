@@ -28,7 +28,7 @@ requirements:
     - curlify2 >=1.0.0,<2.0.0
     - jinja2 ==2.11.3
     - python >=3.6
-    - pyyaml >=5.4
+    - pyyaml ==5.4.0
     - requests ==2.26.0
 
 test:
