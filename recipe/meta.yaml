@@ -1,5 +1,5 @@
 {% set name = "scanapi" %}
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scanapi-{{ version }}.tar.gz
-  sha256: 3ddfa24dc3db517fb6b886605c5b1b57199ed76a0c86a293c93e617cfa551ea6
+  sha256: 644633ca87c4a39ea29ad83c302c496a308a28096a5f8f7a4f91bcd28bc467fa
 
 build:
   number: 0
@@ -23,9 +23,10 @@ requirements:
     - poetry
     - python >=3.6
   run:
-    - appdirs
-    - click
-    - curlify2
+
+    - appdirs >=1.4.4
+    - click >=7.1.2
+    - curlify2 >=1.0.0
     - jinja2 >=2.11.3
     - python >=3.6
     - pyyaml >=5.4
