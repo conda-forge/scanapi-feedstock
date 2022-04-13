@@ -20,15 +20,17 @@ build:
 requirements:
   host:
     - pip
-    - poetry
-    - python >=3.6
+    - poetry >=1.0.9
+    - poetry-dynamic-versioning
+    - python >=3.6.2
   run:
 
     - appdirs >=1.4.4
     - click >=7.1.2
-    - curlify2 >=1.0.0
+    - curlify2 >=1.0.1
     - jinja2 >=2.11.3
-    - python >=3.6
+    - markupsafe ==2.0.1
+    - python >=3.6.2
     - pyyaml >=5.4
     - requests >=2.26.0
 
