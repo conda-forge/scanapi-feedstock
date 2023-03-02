@@ -1,11 +1,11 @@
-About scanapi
-=============
+About scanapi-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scanapi-feedstock/blob/main/LICENSE.txt)
 
 Home: https://scanapi.dev/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scanapi-feedstock/blob/main/LICENSE.txt)
 
 Summary: Automated Testing and Documentation for your REST API
 
