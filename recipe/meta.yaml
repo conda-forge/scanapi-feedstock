@@ -1,5 +1,5 @@
 {% set name = "scanapi" %}
-{% set version = "2.8.2" %}
+{% set version = "2.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scanapi-{{ version }}.tar.gz
-  sha256: 2e39ef0b11fbceaa1142c0e162c9c0a92ff3e407b0527fdea8993609d95d4bf6
+  sha256: 333d4d40a0bfcc5f5ccfdf08141deff02623325511af03421d1517281931767c
 
 build:
   number: 0
