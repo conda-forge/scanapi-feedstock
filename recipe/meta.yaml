@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scanapi-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scanapi-{{ version }}.tar.gz
   sha256: 13dcef565dea63ca4b3283a0c7c0692a1182312faefb1e75c79101db0353a2d0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - scanapi = scanapi:main
@@ -22,9 +22,9 @@ requirements:
     - pip
     - poetry >=1.0.9
     - poetry-dynamic-versioning
-    - python >=3.9,<4.0.0
+    - python {{ python_min }}
   run:
-    - python >=3.9,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - appdirs >=1.4.4,<2.0.0
     - curlify2 >=1.0.1,<2.0.0
     - markupsafe ==2.1.2
@@ -43,6 +43,7 @@ test:
     - scanapi --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://scanapi.dev/
