@@ -1,0 +1,73 @@
+schema_version: 1
+
+context:
+  name: scanapi
+  version: 2.11.0
+  python_min: 3.10
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scanapi-${{ version }}.tar.gz
+  sha256: 8ff694751642260c02e902c49170832205c5d522d086e8ff19daeef930e285f9
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - scanapi = scanapi:main
+
+requirements:
+  host:
+    - pip
+    - poetry-core >=1.0.0
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+    - appdirs >=1.4.4,<2.0.0
+    - curlify2 >=1.0.1,<2.0.0
+    - markupsafe ==2.1.2
+    - rich ==13.3.5
+    - pyyaml ~=6.0.2
+    - jinja2 ~=3.1.0
+    - click >=8.1.3
+    - httpx >=0.24.0,<0.25.0
+    - packaging >=24.0,<25.0
+
+tests:
+  - python:
+      imports:
+        - scanapi
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}
+    script:
+      - scanapi --help
+
+about:
+  summary: Automated Testing and Documentation for your REST API
+  license: MIT
+  license_file: LICENSE
+  description: |
+    ScanAPI is a library for your API that provides automated integration
+    testing and automated live documentation. Given an API specification
+    written in YAML/JSON format, ScanAPI hits the specified endpoints, runs
+    the test cases, and generates a detailed report of this execution—which
+    can also be used as the API documentation itself. With almost no Python
+    knowledge, the user can define endpoints to be hit, the expected behavior
+    for each response and will receive a full real-time diagnostic report of
+    the API.
+
+
+  homepage: https://scanapi.dev/
+  repository: https://github.com/scanapi/scanapi
+
+extra:
+  recipe-maintainers:
+    - thewchan
