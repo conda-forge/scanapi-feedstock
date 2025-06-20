@@ -12,14 +12,13 @@ Summary: Automated Testing and Documentation for your REST API
 Development: https://github.com/scanapi/scanapi
 
 ScanAPI is a library for your API that provides automated integration
- testing and automated live documentation. Given an API specification
- written in YAML/JSON format, ScanAPI hits the specified endpoints, runs
- the test cases, and generates a detailed report of this execution—which
- can also be used as the API documentation itself. With almost no Python
- knowledge, the user can define endpoints to be hit, the expected behavior
- for each response and will receive a full real-time diagnostic report of
- the API.
-
+testing and automated live documentation. Given an API specification
+written in YAML/JSON format, ScanAPI hits the specified endpoints, runs
+the test cases, and generates a detailed report of this execution—which
+can also be used as the API documentation itself. With almost no Python
+knowledge, the user can define endpoints to be hit, the expected behavior
+for each response and will receive a full real-time diagnostic report of
+the API.
 
 Current build status
 ====================
