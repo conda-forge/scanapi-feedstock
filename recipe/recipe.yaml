@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: scanapi
-  version: 2.11.0
-  python_min: 3.10
+  version: "2.12.0"
+  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scanapi-${{ version }}.tar.gz
-  sha256: 8ff694751642260c02e902c49170832205c5d522d086e8ff19daeef930e285f9
+  sha256: fd488a9f9eaed51c0999c7f2d54649507786172fbb053b347b4e4c465937f1d8
 
 build:
   number: 0
