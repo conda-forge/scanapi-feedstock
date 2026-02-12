@@ -14,7 +14,7 @@ source:
   sha256: fd488a9f9eaed51c0999c7f2d54649507786172fbb053b347b4e4c465937f1d8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -46,7 +46,7 @@ tests:
       python_version: ${{ python_min }}.*
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - scanapi --help
 
