@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: scanapi
-  version: "2.13.0"
+  version: "2.13.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scanapi-${{ version }}.tar.gz
-  sha256: b1dece6a203555b490e4b4dd7b6f61d4dead3ad9b1b25be8a89faa5a1eb7453c
+  sha256: 3cc22abe4a5a2febb0980dd9e943fd9f061afb53e7781615fd6272626aa63796
 
 build:
   number: 0
